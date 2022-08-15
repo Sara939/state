@@ -4,16 +4,17 @@ class Counter extends Component{
     constructor(props){
         super(props);
         this.state={counter:this.props.counter}
-        // this.state= this.CngToStart.bind(this)
+        this.CngToStart= this.CngToStart.bind(this)
+        this.DecreaseByOne= this.DecreaseByOne.bind(this)
 
     }
     IncreaseByOne=()=>{
         this.setState({counter: this.state.counter+1})
     }
-    DecreaseByOne=()=>{
+    DecreaseByOne(){
         this.setState({counter: this.state.counter-1})
     }
-    CngToStart=()=>{
+    CngToStart(){
         this.setState({counter: 0})
     }
     
